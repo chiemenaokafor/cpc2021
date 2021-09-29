@@ -48,6 +48,7 @@
 @media (min-width: 768px) {
   .background__text {
     text-align: right;
+    padding-right: 30px;
   }
   .background__header {
     font-size: 70px;
