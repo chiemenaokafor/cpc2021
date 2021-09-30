@@ -23,11 +23,11 @@
   font-size: 15px;
 }
 .background__btn {
-  border: 1px var(--light_blue) solid;
-  padding: 5px 15px;
-  margin-top: 25px;
-  border-radius: 6px;
+  text-align: center;
+}
+.background__icon {
   color: white;
+  font-size: 30px;
 }
 @media (orientation: landscape) {
   .background {
@@ -48,7 +48,8 @@
 @media (min-width: 768px) {
   .background__text {
     text-align: right;
-    padding-right: 30px;
+    padding-right: 25px;
+    margin-top: 200px;
   }
   .background__header {
     font-size: 70px;
@@ -59,6 +60,7 @@
   .background__btn {
     font-size: 23px;
     padding: 10px 25px;
+    margin-top: 30px;
   }
 }
 @media (min-width: 1024px) {
