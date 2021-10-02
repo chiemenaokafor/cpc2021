@@ -11,7 +11,10 @@ export default function Profile() {
         </div>
         <div className="profile__content">
           <div className="profile__contentSection1">
-            <h1 className="profile__name">Dogunro Tobi</h1>
+            <div className="profile__name">
+              <h1 className="profile__firstName">Dogunro</h1>
+              <h1 className="profile__lastName">Tobi</h1>
+            </div>
             <button className="profile__btn">Sign Yearbook</button>
           </div>
           <div className="profile__contentSection2">
@@ -35,7 +38,10 @@ export default function Profile() {
               add that view of the signature you did in your first design here
             </p>
           </div>
-          <div className="profile__contentSection4"></div>
+          <div className="profile__contentSection4">
+            <div className="profile__contentSection4Text"></div>
+            <div className="profile__contentSection4Links"></div>
+          </div>
         </div>
       </div>
     </div>

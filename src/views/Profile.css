@@ -21,6 +21,11 @@
   font-weight: bold;
   padding: 20px 0 20px;
 }
+.profile__firstName,
+.profile__lastName {
+  font-size: 25px;
+  font-weight: bold;
+}
 .profile__contentSection2 {
   max-width: 1200px;
   margin: 0 auto;
@@ -54,7 +59,8 @@
     justify-content: space-between;
     align-items: center;
   }
-  .profile__name {
+  .profile__firstName,
+  .profile__lastName {
     font-size: 30px;
   }
   .profile__btn {
@@ -78,9 +84,10 @@
     background-color: #cfcac5;
     padding: 0 60px;
   }
-  .profile__name {
+
+  .profile__firstName,
+  .profile__lastName {
     font-size: 40px;
-    width: 30px;
   }
   .profile__btn {
     padding: 10px 40px;
@@ -117,9 +124,10 @@
     flex: 0.65;
     padding: 40px 60px;
   }
-  .profile__name {
+
+  .profile__firstName,
+  .profile__lastName {
     font-size: 50px;
-    width: 30px;
   }
   .profile__contentSection3 p {
     max-width: 500px;
