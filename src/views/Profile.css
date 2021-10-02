@@ -6,6 +6,7 @@
   display: block;
   height: 100%;
   margin: 0 auto;
+  cursor: pointer;
 }
 .profile__content {
   min-height: calc(100vh - 350px);
@@ -119,6 +120,10 @@
   }
   .profile__image img {
     height: 85%;
+    transition: 0.2s ease-in-out;
+  }
+  .profile__image img:hover {
+    transform: scale(1.04);
   }
   .profile__content {
     flex: 0.65;

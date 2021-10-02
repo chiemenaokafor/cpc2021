@@ -1,13 +1,20 @@
 import React from "react";
+import { useSelector, useDispatch } from "react-redux";
 import ada from "../assets/images/ada.png";
+import ImageModal from "../components/ImageModal";
+import { showModal } from "../store/actions/imageModal";
 import "./Profile.css";
 
 export default function Profile() {
+  const dispatch = useDispatch();
+  const handleClick = () => {
+    dispatch(showModal());
+  };
   return (
     <div className="profile">
       <div className="profile__wrapper">
         <div className="profile__image">
-          <img src={ada} alt="Profile Image" />
+          <img onClick={() => handleClick()} src={ada} alt="Profile Image" />
         </div>
         <div className="profile__content">
           <div className="profile__contentSection1">
@@ -44,6 +51,7 @@ export default function Profile() {
           </div>
         </div>
       </div>
+      <ImageModal />
     </div>
   );
 }
