@@ -86,6 +86,7 @@
 .counter_column,
 .counter_value,
 .counter_name {
+  text-align: center;
   color: var(--color-white);
   /* font-weight: bold; */
   padding: 2rem;
