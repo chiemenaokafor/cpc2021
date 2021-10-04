@@ -10,6 +10,7 @@ import {
 } from "react-bootstrap";
 import { NavLink, Link } from "react-router-dom";
 import * as ROUTES from "../routes/routes";
+import landingImage from "../assets/images/search.png";
 
 import { ReactComponent as Caret } from "../assets/svg/caret-down.svg";
 import { ReactComponent as SearchIcon } from "../assets/svg/search-icon.svg";
@@ -81,9 +82,10 @@ const Search = () => {
         </Container>
       </Navbar>
       <div className="search_container">
+        <img src={landingImage} className="searchImage" />
         <div className="search_contents">
           <div className="justified" style={{ margin: 15 }}>
-            {counters.map((item, index) => (
+            {counters.map((item) => (
               <div className="counter_all">
                 <div className="counter_container">
                   <div className="numberContainer">
@@ -114,8 +116,8 @@ const Search = () => {
               </div>
             </div>
           ) : (
-            <div className="searched">
-              <SearchButton onClick={() => setClicked(true)} />
+            <div className="searched" onClick={() => setClicked(true)}>
+              <SearchButton />
             </div>
           )}
 
