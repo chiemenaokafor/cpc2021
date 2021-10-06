@@ -17,6 +17,7 @@ import { ReactComponent as SearchIcon } from "../assets/svg/search-icon.svg";
 import { ReactComponent as SearchButton } from "../assets/svg/search.svg";
 
 import "../assets/css/search.css";
+import AutoCompleteText from "../components/AutoCompleteText";
 
 const Search = () => {
   // Set the date we're counting down to
@@ -101,27 +102,13 @@ const Search = () => {
           </div>
           {clicked ? (
             <div className="form-horizontal">
-              <div className="search_group">
-                <input
-                  type="text"
-                  className="search_bar"
-                  placeholder="Search for your setmates"
-                  onChange={(e) => setName(e.target.value)}
-                />
-                <span className="input-group-btn">
-                  <button className="search_button" type="button">
-                    ENTER
-                  </button>
-                </span>
-              </div>
+              <AutoCompleteText />
             </div>
           ) : (
             <div className="searched" onClick={() => setClicked(true)}>
               <SearchButton />
             </div>
           )}
-
-          <div></div>
         </div>
       </div>
     </div>

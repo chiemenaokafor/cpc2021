@@ -1,0 +1,39 @@
+.searched-names {
+  position: absolute;
+  bottom: 100%;
+  width: 100%;
+  padding: 1rem;
+  font-size: 2rem;
+  border-radius: 1rem;
+  background-color: var(--color-white);
+}
+.searched-item {
+  padding: 1rem;
+  margin-bottom: 1px solid grey;
+  cursor: pointer;
+  /* background-color: green; */
+}
+
+.searched-item:hover {
+  color: var(--color-purple-light);
+}
+
+.search-user-icon {
+  margin-right: 2rem;
+}
+
+.input-search-icon {
+  position: absolute;
+  top: 50%;
+  left: 2%;
+  bottom: 0;
+  margin-right: -20px;
+  z-index: 3;
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  transform: translateY(-50%);
+}
