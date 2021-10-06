@@ -20,18 +20,24 @@ function StudentCard() {
             fontWeight: "900",
           }}
         >
-          <h1 className=" text-5xl pr-8 pl-56 pb-14 leading-relaxed">
-            View firstName's Profile
+          <h1 className=" text-4xl sm:text-5xl pr-8 pl-96 pb-14 leading-relaxed">
+            View Tochukwu's Profile
           </h1>
         </div>
       </div>
 
-      <div className=" flex flex-col items-start justify-end mt-8">
-        <h1 className="text-3xl" style={{ fontWeight: 400 }}>
-          Firstname
+      <div className=" flex flex-col items-start justify-end mt-8  ">
+        <h1
+          className="text-3xl tracking-widest"
+          style={{ fontWeight: 900, letterSpacing: "0.18em" }}
+        >
+          Femi
         </h1>
-        <h1 className="mt-1 text-4xl" style={{ fontWeight: 400 }}>
-          lastName
+        <h1
+          className="mt-1 text-4xl "
+          style={{ fontWeight: 400, letterSpacing: "0.18em" }}
+        >
+          Ikechukwu
         </h1>
       </div>
     </div>

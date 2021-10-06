@@ -22,18 +22,21 @@ function Search({ showInput, showInputHandler, course, setCourse }) {
       style={styles.modalBackground}
     >
       <CancelIcon
-        className="h-20 w-20 cursor-pointer absolute top-7 left-7"
+        className="w-14 h-14 md:h-20 md:w-20 cursor-pointer absolute top-7 left-7"
         onClick={showInputHandler}
       />
-      <form className="flex flex-row items-center mt-96">
+      <form className="flex flex-row items-center mt-64 md:mt-96">
         <input
-          className={`right-0 bg-transparent border-b-2 focus:shadow-lg border-white mr-7  text-7xl outline-none `}
-          placeholder="Search for you course"
+          className={`text-5xl pl-2 right-0 bg-transparent border-b-2 focus:shadow-lg border-white mr-7  md:text-7xl outline-none `}
+          placeholder="Search for a course"
           value={course}
           onChange={(e) => setCourse(e.target.value)}
         />
         <button type="submit">
-          <SearchIcon className={`h-20 w-20`} style={{ cursor: "pointer" }} />
+          <SearchIcon
+            className={`w-14 h-14 md:h-20 md:w-20`}
+            style={{ cursor: "pointer" }}
+          />
         </button>
       </form>
     </div>

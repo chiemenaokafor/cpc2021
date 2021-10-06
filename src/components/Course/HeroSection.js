@@ -5,10 +5,15 @@ import coursepictemp from "../../assets/images/coursepictemp.png";
 
 // svg
 import { ReactComponent as SearchIcon } from "../../assets/svg/course-search-icon.svg";
+import Layer from "../../assets/svg/course-layer.svg";
 
 // components
 import CourseSearch from "./CourseSearch.js";
 
+// css
+import "./HeroSection.css";
+
+// style
 const styles = {
   departmentCode: {
     fontWeight: "700",
@@ -36,6 +41,9 @@ function HeroSection({ departmentCode, courseName, department, image }) {
   const [showInput, setShowInput] = useState(false);
   const [course, setCourse] = useState("");
 
+  const disappear = "transition duration-200 ease-linear opacity-0";
+  const reappear = "transition duration-200 ease-linear opacity-100";
+
   useEffect(() => {
     setstartTransition(true);
   }, []);
@@ -46,19 +54,26 @@ function HeroSection({ departmentCode, courseName, department, image }) {
 
   return (
     <div
-      className="HeroSection__container h-screen px-10 md:px-16 flex flex-col justify-between pb-56 relative overflow-x-hidden"
+      className="HeroSection__container px-10 md:px-16 flex flex-col justify-between pb-56 relative overflow-hidden md:shadow-none shadow-2xl"
       style={styles.background()}
     >
       <nav className="HeroSection__navbar w-full pt-11">
         <ul className="flex flex-row justify-end md:justify-between items-center">
           <li
-            className="HeroSection__department-code animate-pulse md:block hidden"
+            className="HeroSection__department-code md:block hidden"
             style={styles.departmentCode}
           >
-            <h1>{departmentCode}</h1>
+            <h1 className={showInput ? disappear : reappear}>
+              {departmentCode}
+            </h1>
           </li>
-          <li className="md:block hidden">
-            <h1 style={styles.settext}>THE 16TH SET</h1>
+          <li className="md:block hidden  animate-bounce">
+            <h1
+              className={showInput ? disappear : reappear}
+              style={styles.settext}
+            >
+              THE 16TH SET
+            </h1>
           </li>
           <li
             className="HeroSection__search "
@@ -66,7 +81,9 @@ function HeroSection({ departmentCode, courseName, department, image }) {
             onClick={showInputHandler}
           >
             <SearchIcon
-              className={`h-20 w-20 ${showInput ? "invisible" : ""}`}
+              className={`w-10 h-10 md:h-20 md:w-20 ${
+                showInput ? "invisible" : ""
+              }`}
               style={{ cursor: "pointer" }}
             />
           </li>
@@ -76,10 +93,12 @@ function HeroSection({ departmentCode, courseName, department, image }) {
       <section
         className={`HeroSection__course-detail text-right transform ${
           startTransition ? "translate-x-0" : "translate-x-full"
-        } transition duration-1000 ease-linear`}
+        } transition duration-1000 ease-linear ${
+          showInput ? disappear : reappear
+        }`}
       >
         <h1
-          className="HeroSection__course-name text-8xl"
+          className="HeroSection__course-name text-7xl lg:text-8xl pl-64"
           style={{ color: "#FAFAFA" }}
         >
           {courseName}
@@ -98,6 +117,16 @@ function HeroSection({ departmentCode, courseName, department, image }) {
         showInput={showInput}
         showInputHandler={showInputHandler}
       />
+      <div
+        className="-bottom-3 hidden sm:block absolute left-0 w-full origin-bottom-left"
+        style={{
+          aspectRatio: "900/50",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0)), url('${Layer}')`,
+        }}
+      ></div>
     </div>
   );
 }

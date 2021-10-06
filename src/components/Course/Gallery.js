@@ -4,6 +4,9 @@ import React from "react";
 import StudentSearch from "./StudentSearch.js";
 import StudentCard from "./StudentCard.js";
 
+// react-reveal
+import Bounce from "react-reveal/Bounce";
+
 function Gallery() {
   return (
     <div
@@ -11,14 +14,34 @@ function Gallery() {
       style={{ zIndex: 3, minHeight: "10rem" }}
     >
       <StudentSearch />
-      <div className="Gallery__studentContainer grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-10 mt-20">
-        <StudentCard />
-        <StudentCard />
-        <StudentCard />
-        <StudentCard />
-        <StudentCard />
-        <StudentCard />
-        <StudentCard />
+      <div className="Gallery__studentContainer grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-10 mt-32">
+        <Bounce left>
+          <StudentCard />
+        </Bounce>
+        <Bounce left>
+          <StudentCard />
+        </Bounce>
+        <Bounce left>
+          <StudentCard />
+        </Bounce>
+        <Bounce left>
+          <StudentCard />
+        </Bounce>
+        <Bounce left>
+          <StudentCard />
+        </Bounce>
+        <Bounce left>
+          <StudentCard />
+        </Bounce>
+        <Bounce left>
+          <StudentCard />
+        </Bounce>
+        <Bounce left>
+          <StudentCard />
+        </Bounce>
+        <Bounce left>
+          <StudentCard />
+        </Bounce>
       </div>
     </div>
   );
