@@ -13,8 +13,12 @@
   color: white;
   padding: 20px 20px;
 }
-.header__logo {
+.header__logo,
+.header__logo:hover {
   flex: 0.2;
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
 }
 .header__logo h1 {
   font-weight: bold;

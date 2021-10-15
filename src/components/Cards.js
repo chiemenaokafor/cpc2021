@@ -1,66 +1,59 @@
 import React from "react";
-import "./Cards.css";
 import Zoom from "react-reveal/Zoom";
 
+import "../assets/css/Cards.css";
+
 export default function Cards() {
+  const cardList = [
+    {
+      h1: "Computer",
+      p: "Engineering",
+    },
+    {
+      h1: "Electrical",
+      p: "Engineering",
+    },
+    {
+      h1: "Mechanical",
+      p: "Engineering",
+    },
+    {
+      h1: "Civil",
+      p: "Engineering",
+    },
+    {
+      h1: "Information",
+      p: "Engineering",
+    },
+    {
+      h1: "Chemical",
+      p: "Engineering",
+    },
+    {
+      h1: "Petroleum",
+      p: "Engineering",
+    },
+    {
+      h1: "Computer",
+      p: "Engineering",
+    },
+    {
+      h1: "Computer",
+      p: "Engineering",
+    },
+  ];
   return (
     <div id="cards" className="cards">
       <div className="cards__wrapper">
         <Zoom duration={500}>
-          <div className="cards__block">
-            <div className="cards__text">
-              <h1 className="cards__name">Computer</h1>
-              <div className="cards__name">Engineering</div>
+          {cardList.map((item, key) => (
+            <div className="cards__block">
+              <div className="cards__text">
+                <h1 className="cards__name">{item.h1}</h1>
+                <div className="cards__name">{item.p}</div>
+              </div>
             </div>
-          </div>
-          <div className="cards__block">
-            <div className="cards__text">
-              <h1 className="cards__name">Electrical</h1>
-              <div className="cards__name">Engineering</div>
-            </div>
-          </div>
-          <div className="cards__block">
-            <div className="cards__text">
-              <h1 className="cards__name">Mechanical</h1>
-              <div className="cards__name">Engineering</div>
-            </div>
-          </div>
-          <div className="cards__block">
-            <div className="cards__text">
-              <h1 className="cards__name">Civil</h1>
-              <div className="cards__name">Engineering</div>
-            </div>
-          </div>
-          <div className="cards__block">
-            <div className="cards__text">
-              <h1 className="cards__name">Petroleum</h1>
-              <div className="cards__name">Engineering</div>
-            </div>
-          </div>
-          <div className="cards__block">
-            <div className="cards__text">
-              <h1 className="cards__name">Chemical</h1>
-              <div className="cards__name">Engineering</div>
-            </div>
-          </div>
-          <div className="cards__block">
-            <div className="cards__text">
-              <h1 className="cards__name">Information</h1>
-              <div className="cards__name">Engineering</div>
-            </div>
-          </div>
-          <div className="cards__block">
-            <div className="cards__text">
-              <h1 className="cards__name">Computer</h1>
-              <div className="cards__name">Engineering</div>
-            </div>
-          </div>
-          <div className="cards__block">
-            <div className="cards__text">
-              <h1 className="cards__name">Computer</h1>
-              <div className="cards__name">Engineering</div>
-            </div>
-          </div>
+          ))}
         </Zoom>
       </div>
     </div>
