@@ -1,8 +1,9 @@
 import React from "react";
-import "./Background.css";
 import Fade from "react-reveal/Fade";
 import { BiMouse } from "react-icons/bi";
 import { Link } from "react-scroll";
+
+import "../assets/css/Background.css";
 
 export default function Background() {
   return (
@@ -20,7 +21,6 @@ export default function Background() {
           <Link
             to="cards"
             style={{ cursor: "pointer" }}
-            to="cards"
             smooth={true}
             duration={500}
             spy={true}

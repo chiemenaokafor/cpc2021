@@ -1,10 +1,12 @@
 import React, { useRef } from "react";
 import { useSelector } from "react-redux";
-import "./ImageModal.css";
-import ada from "../assets/images/ada.png";
 import { ImCross } from "react-icons/im";
-import { hideModal } from "../store/actions/imageModal";
 import { useDispatch } from "react-redux";
+
+import { hideModal } from "../store/actions/imageModal";
+import ada from "../assets/images/ada.png";
+
+import "../assets/css/ImageModal.css";
 
 export default function ImageModal({ imageSource }) {
   const modalState = useSelector((store) => store.imageModal);
@@ -34,7 +36,7 @@ export default function ImageModal({ imageSource }) {
             className="imageModal__icon"
           />
         </div>
-        <img src={ada} className="imageModal__image" />
+        <img src={ada} alt="graduate" className="imageModal__image" />
       </div>
     </div>
   );
