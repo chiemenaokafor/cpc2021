@@ -48,6 +48,9 @@
       "last 1 safari version"
     ]
   },
+  "engines": {
+    "node": "14.x"
+  },
   "devDependencies": {
     "autoprefixer": "^9.8.7",
     "postcss": "^7.0.38",
