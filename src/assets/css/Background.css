@@ -1,0 +1,77 @@
+.background {
+  background: linear-gradient(0deg, rgb(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../images/people.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+}
+.background__wrapper {
+  flex: 1;
+}
+.background__text {
+  color: white;
+  text-align: center;
+}
+.background__header {
+  font-size: 30px;
+  font-weight: bold;
+}
+.background__head {
+  font-size: 15px;
+}
+.background__btn {
+  text-align: center;
+}
+.background__icon {
+  color: white;
+  font-size: 30px;
+}
+@media (orientation: landscape) {
+  .background {
+    min-height: 100vh;
+  }
+}
+@media (min-width: 640px) {
+  .background__header {
+    font-size: 40px;
+  }
+  .background__body {
+    font-size: 18px;
+  }
+  .background__btn {
+    font-size: 18px;
+  }
+}
+@media (min-width: 768px) {
+  .background__text {
+    text-align: right;
+    padding-right: 25px;
+    margin-top: 200px;
+  }
+  .background__header {
+    font-size: 70px;
+  }
+  .background__body {
+    font-size: 25px;
+  }
+  .background__btn {
+    font-size: 23px;
+    padding: 10px 25px;
+    margin-top: 30px;
+  }
+}
+@media (min-width: 1024px) {
+  .background__header {
+    font-size: 90px;
+  }
+  .background__body {
+    font-size: 25px;
+  }
+  .background__btn {
+    font-size: 23px;
+    padding: 20px 40px;
+  }
+}

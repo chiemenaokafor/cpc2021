@@ -75,6 +75,12 @@ img {
   }
 }
 
+@media only screen and (max-width: 742px) {
+  html {
+    font-size: 45%;
+  }
+}
+
 @media only screen and (max-width: 700px) {
   html {
     font-size: 40%;
@@ -86,8 +92,13 @@ img {
     font-size: 35%;
   }
 }
+@media only screen and (max-width: 445px) {
+  html {
+    font-size: 33%;
+  }
+}
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 420px) {
   html {
     font-size: 30%;
   }

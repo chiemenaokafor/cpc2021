@@ -1,18 +1,9 @@
 import React, { useState } from "react";
-import {
-  Navbar,
-  Nav,
-  Container,
-  Button,
-  Form,
-  FormControl,
-  NavDropdown,
-} from "react-bootstrap";
-import { NavLink, Link } from "react-router-dom";
+import { Navbar, Nav, Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import * as ROUTES from "../routes/routes";
+import landingImage from "../assets/images/search.png";
 
-import { ReactComponent as Caret } from "../assets/svg/caret-down.svg";
-import { ReactComponent as SearchIcon } from "../assets/svg/search-icon.svg";
 import { ReactComponent as SearchButton } from "../assets/svg/search.svg";
 
 import "../assets/css/search.css";
@@ -25,7 +16,7 @@ const Search = () => {
   const [minutes, setMinutes] = useState();
   const [seconds, setSeconds] = useState();
   const [clicked, setClicked] = useState(false);
-  const [name, setName] = useState();
+  // const [name, setName] = useState();
 
   setInterval(function () {
     const now = new Date().getTime();
@@ -62,7 +53,9 @@ const Search = () => {
             <Nav className="mr-auto"></Nav>
             <Nav>
               <Nav.Link href="#home">Reels</Nav.Link>
-              <NavDropdown title="Colleges" id="collasible-nav-dropdown">
+              <Nav.Link href="/colleges">Colleges</Nav.Link>
+              <Nav.Link href="/profile">Profile</Nav.Link>
+              {/* <NavDropdown title="Colleges" id="collasible-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
                   Another action
@@ -75,15 +68,16 @@ const Search = () => {
                   Separated link
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="#home">Hall of Fame</Nav.Link>
+              <Nav.Link href="#home">Hall of Fame</Nav.Link> */}
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
       <div className="search_container">
+        <img alt="landing__image" src={landingImage} className="searchImage" />
         <div className="search_contents">
           <div className="justified" style={{ margin: 15 }}>
-            {counters.map((item, index) => (
+            {counters.map((item) => (
               <div className="counter_all">
                 <div className="counter_container">
                   <div className="numberContainer">
@@ -104,7 +98,7 @@ const Search = () => {
                   type="text"
                   className="search_bar"
                   placeholder="Search for your setmates"
-                  onChange={(e) => setName(e.target.value)}
+                  // onChange={(e) => setName(e.target.value)}
                 />
                 <span className="input-group-btn">
                   <button className="search_button" type="button">
@@ -114,11 +108,10 @@ const Search = () => {
               </div>
             </div>
           ) : (
-            <div className="searched">
-              <SearchButton onClick={() => setClicked(true)} />
+            <div className="searched" onClick={() => setClicked(true)}>
+              <SearchButton />
             </div>
           )}
-
           <div></div>
         </div>
       </div>
