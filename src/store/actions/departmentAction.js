@@ -1,6 +1,6 @@
 export const setDepartments = (departments) => {
     return {
-        type: "SET_DEPARTMENT",
+        type: "SET_DEPARTMENTS",
         payload: departments,
     };
 };

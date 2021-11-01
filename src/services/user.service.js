@@ -1,6 +1,6 @@
 var FormData = require("form-data");
 
-const URI = "/api/v1/user/";
+const ENDPOINT_1 = "/api/v1/user/";
 
 const loginUser = async function (email, password) {
     const formData = new FormData();
@@ -17,7 +17,7 @@ const loginUser = async function (email, password) {
         formData.append("csrfmiddlewaretoken", csrftokenCookieValue);
     }
 
-    return await fetch(URI + "login/", {
+    return await fetch(ENDPOINT_1 + "login/", {
         method: "POST",
         body: formData,
         headers: {
@@ -32,7 +32,7 @@ const loginUser = async function (email, password) {
 };
 
 const getUser = async function (token) {
-    return fetch(URI + "user/", {
+    return fetch(ENDPOINT_1 + "user/", {
         method: "GET",
         headers: { Authorization: "Token " + token },
     });

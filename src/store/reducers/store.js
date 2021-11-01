@@ -10,7 +10,7 @@ import { studentsReducer } from "./studentsReducer";
 const rootReducer = combineReducers({
     imageModal: imageModal,
     auth: auth,
-    department: departmentsReducer,
+    departments: departmentsReducer,
     colleges: collegesReducer,
     programmes: programmesReducer,
     student: studentReducer,
