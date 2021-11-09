@@ -47,7 +47,7 @@ export default function Cards() {
       <div className="cards__wrapper">
         <Zoom duration={500}>
           {cardList.map((item, key) => (
-            <div className="cards__block">
+            <div key={key} className="cards__block">
               <div className="cards__text">
                 <h1 className="cards__name">{item.h1}</h1>
                 <div className="cards__name">{item.p}</div>
