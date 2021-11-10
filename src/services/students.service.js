@@ -1,7 +1,7 @@
 const ENDPOINT_1 = "/api/v1/showprogramdetail/";
 const ENDPOINT_2 = "/api/v1/showstudentdetail/";
 
-const getAllStudentsForAProgramme = async function (programme) {
+export default const getAllStudentsForAProgramme = async function (programme) {
     return fetch(ENDPOINT_1 + programme, { method: "GET" })
         .then((res) => {
             if (res.ok) {
@@ -19,7 +19,7 @@ const getAllStudentsForAProgramme = async function (programme) {
         .catch((err) => ({ success: false, error: err }));
 };
 
-const getAStudent = async function (matricNo) {
+export default const getAStudent = async function (matricNo) {
     return fetch(ENDPOINT_2 + matricNo, { method: "GET" })
         .then((res) => {
             if (res.ok) {
@@ -31,4 +31,4 @@ const getAStudent = async function (matricNo) {
         .catch((err) => ({ success: false, error: err }));
 };
 
-module.exports = { getAllStudentsForAProgramme, getAStudent };
+// module.exports = { getAllStudentsForAProgramme, getAStudent };
