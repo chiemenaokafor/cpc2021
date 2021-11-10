@@ -1,7 +1,7 @@
-const URI = "/api/v1/";
+const ENDPOINT_1 = "/api/v1/";
 
 const getSignature = async function () {
-    return fetch(URI + "ShowSignature", { method: "GET" })
+    return fetch(ENDPOINT_1 + "ShowSignature", { method: "GET" })
         .then((res) => {
             if (res.ok) {
                 return res.json;
@@ -15,7 +15,7 @@ const postSignature = async function (email, comment) {
     const formData = new FormData();
     formData.append("email", email);
     formData.append("comment", comment);
-    return fetch(URI + "PostSignature", {
+    return fetch(ENDPOINT_1 + "PostSignature", {
         method: "POST",
         body: formData,
         headers: {
@@ -34,7 +34,7 @@ const updateSignature = async function (email, comment) {
     const formData = new FormData();
     formData.append("email", email);
     formData.append("comment", comment);
-    return fetch(URI + "UpdateSignature", {
+    return fetch(ENDPOINT_1 + "UpdateSignature", {
         method: "POST",
         body: formData,
         headers: {
@@ -53,7 +53,7 @@ const updateSignature = async function (email, comment) {
 const deleteSignature = async function (email, comment) {
     const formData = new FormData();
     formData.append("email", email);
-    return fetch(URI + "PostSignature", {
+    return fetch(ENDPOINT_1 + "PostSignature", {
         method: "DELETE",
         body: formData,
         headers: {

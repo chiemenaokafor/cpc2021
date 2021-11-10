@@ -1,4 +1,6 @@
-const URI = "/api/v1/user/";
+var FormData = require("form-data");
+
+const ENDPOINT_1 = "/api/v1/user/";
 
 const loginUser = async function (email, password) {
     const formData = new FormData();
@@ -6,17 +8,31 @@ const loginUser = async function (email, password) {
     formData.append("email", email);
     formData.append("password", password);
 
-    return await fetch(URI + "login/", {
+    let csrftokenCookieValue = document.cookie.replace(
+        /(?:(?:^|.*;\s*)csrftoken\s*\=\s*([^;]*).*$)|^.*$/,
+        "$1"
+    );
+
+    if (csrftokenCookieValue !== "") {
+        formData.append("csrfmiddlewaretoken", csrftokenCookieValue);
+    }
+
+    return await fetch(ENDPOINT_1 + "login/", {
         method: "POST",
         body: formData,
         headers: {
-            "Content-Type": "form-data",
+            "Content-Type": "multipart/form-data ",
         },
-    });
+    })
+        .then((res) => {
+            return res.json();
+        })
+        .then((data) => data)
+        .catch((err) => console.error("Error: ", err));
 };
 
 const getUser = async function (token) {
-    return fetch(URI + "user/", {
+    return fetch(ENDPOINT_1 + "user/", {
         method: "GET",
         headers: { Authorization: "Token " + token },
     });
