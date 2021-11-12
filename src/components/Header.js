@@ -1,5 +1,5 @@
 import React from "react";
-import { RiSearchLine } from "react-icons/ri";
+// import { RiSearchLine } from "react-icons/ri";
 import { NavLink } from "react-router-dom";
 
 import "../assets/css/Header.css";
@@ -17,7 +17,7 @@ export default function Header() {
           <h1>THE 16TH SET</h1>
         </div>
         <div className="header__right">
-          <RiSearchLine className="header__icon" />
+          {/* <RiSearchLine className="header__icon" /> */}
         </div>
       </div>
     </div>
