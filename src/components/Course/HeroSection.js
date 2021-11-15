@@ -68,9 +68,7 @@ function HeroSection({ collegeCode, courseName, department, programmePic }) {
                             className={`${
                                 showInput ? disappear : reappear
                             } cursor-pointer `}
-                            onClick={() =>
-                                history.push("/college/" + collegeCode)
-                            }
+                            onClick={() => history.push("/colleges")}
                         >
                             {collegeCode}
                         </h1>
@@ -79,6 +77,7 @@ function HeroSection({ collegeCode, courseName, department, programmePic }) {
                         <h1
                             className={showInput ? disappear : reappear}
                             style={styles.settext}
+                            onClick={() => history.push("/search")}
                         >
                             THE 16TH SET
                         </h1>

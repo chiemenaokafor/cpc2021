@@ -33,6 +33,7 @@ function Course() {
     };
 
     useEffect(() => {
+        dispatch(setStudents([]));
         const onMount = async () => {
             const data = await getAllStudentsForAProgramme(course);
 

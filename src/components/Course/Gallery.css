@@ -1,9 +1,9 @@
-.loading {
+.Gallery__loading {
     overflow-x: hidden;
     position: relative;
     background: #4b4b4b4b;
 }
-.loading:after {
+.Gallery__loading:after {
     content: "";
     display: block;
     position: absolute;

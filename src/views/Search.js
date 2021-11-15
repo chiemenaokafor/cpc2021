@@ -20,7 +20,7 @@ const Search = () => {
 
   setInterval(function () {
     const now = new Date().getTime();
-    const distance = countDownDate - now;
+    const distance = now - countDownDate;
 
     setDays(Math.floor(distance / (1000 * 60 * 60 * 24)));
     setHours(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
@@ -52,9 +52,9 @@ const Search = () => {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto"></Nav>
             <Nav>
-              <Nav.Link href="#home">Reels</Nav.Link>
+              {/* <Nav.Link href="#home">Reels</Nav.Link> */}
               <Nav.Link href="/colleges">Colleges</Nav.Link>
-              <Nav.Link href="/profile">Profile</Nav.Link>
+              {/* <Nav.Link href="/profile">Profile</Nav.Link> */}
               {/* <NavDropdown title="Colleges" id="collasible-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">

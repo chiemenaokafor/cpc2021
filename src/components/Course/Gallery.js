@@ -16,22 +16,21 @@ import { useHistory } from "react-router-dom";
 function Loaders(props) {
     return (
         <div
-            className="col-span-1 "
+            className="col-span-1"
             style={{
-                // background: "#4b4b4b4b",
                 minHeight: "90vh",
             }}
         >
             <div
-                className="loading"
+                className="Gallery__loading"
                 style={{ height: "70%", borderRadius: "20px" }}
             ></div>
             <div
-                className="loading my-5"
+                className="Gallery__loading my-5"
                 style={{ height: "3%", width: "45%", borderRadius: "20px" }}
             ></div>
             <div
-                className="loading"
+                className="Gallery__loading"
                 style={{ height: "3%", width: "30%", borderRadius: "20px" }}
             ></div>
         </div>

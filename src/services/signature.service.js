@@ -1,6 +1,6 @@
 const ENDPOINT_1 = "/api/v1/";
 
-const getSignature = async function () {
+export const getSignature = async function () {
     return fetch(ENDPOINT_1 + "ShowSignature", { method: "GET" })
         .then((res) => {
             if (res.ok) {
@@ -11,7 +11,7 @@ const getSignature = async function () {
         .then((data) => data);
 };
 
-const postSignature = async function (email, comment) {
+export const postSignature = async function (email, comment) {
     const formData = new FormData();
     formData.append("email", email);
     formData.append("comment", comment);
@@ -30,7 +30,7 @@ const postSignature = async function (email, comment) {
         })
         .then((data) => data);
 };
-const updateSignature = async function (email, comment) {
+export const updateSignature = async function (email, comment) {
     const formData = new FormData();
     formData.append("email", email);
     formData.append("comment", comment);
@@ -50,7 +50,7 @@ const updateSignature = async function (email, comment) {
         .then((data) => data);
 };
 
-const deleteSignature = async function (email, comment) {
+export  deleteSignature = async function (email, comment) {
     const formData = new FormData();
     formData.append("email", email);
     return fetch(ENDPOINT_1 + "PostSignature", {
@@ -67,11 +67,4 @@ const deleteSignature = async function (email, comment) {
             throw res;
         })
         .then((data) => data);
-};
-
-module.exports = {
-    getSignature,
-    postSignature,
-    deleteSignature,
-    updateSignature,
 };
